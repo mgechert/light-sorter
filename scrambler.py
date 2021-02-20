@@ -7,7 +7,7 @@ class Scrambler:
         self.bitmap = Bitmap(width, height, value_count)
         self.matrix = []
         for row in range(height):
-            self.matrix.append([])
+            self.matrix.append(bytearray())
             nums = list(range(width))
             while len(nums) > 0:
                 self.matrix[row].append(nums.pop(randrange(len(nums))))

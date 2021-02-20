@@ -1,0 +1,7 @@
+# This file contains WiFi configuration info.
+# Rename to config.py
+
+secrets = {
+    'ssid' : '<YOUR SSID>',
+    'password': '<YOUR PASSWORD>'
+}

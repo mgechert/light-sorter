@@ -1,6 +1,7 @@
 import adafruit_imageload
 from displayio import Bitmap, Palette
 from random import randrange
+from time import sleep
 
 class Scrambler:
     def __init__(self, width, height, value_count):
@@ -20,8 +21,9 @@ class Scrambler:
             col, row = key
         else:
             raise ValueError()
-        # matrix[row][col] has the scrambled column index
-        self.bitmap[self.matrix[row][col], row] = newvalue
+        # matrix[row].index(col) is the "scrambled" column index
+        new_col = self.matrix[row].index(bytes([col]))
+        self.bitmap[new_col, row] = newvalue
 
     @classmethod
     def load_bitmap(cls, file):

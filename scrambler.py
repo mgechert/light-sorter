@@ -1,7 +1,6 @@
 import adafruit_imageload
 from displayio import Bitmap, Palette
 from random import randrange
-from time import sleep
 
 class Scrambler:
     def __init__(self, width, height, value_count):
@@ -33,12 +32,8 @@ class Scrambler:
             palette=Palette,
         )
 
-    def swap_pix(self, row, i, j):
+    def swap_cols(self, row, i, j):
         if i == j:
             return
         self.matrix[row][i], self.matrix[row][j] = self.matrix[row][j], self.matrix[row][i]
-        self.bitmap[i, row], self.bitmap[j, row] = self.bitmap[j, row], self.bitmap[i, row]
-
-    
-
-    
+        self.bitmap[i, row], self.bitmap[j, row] = self.bitmap[j, row], self.bitmap[i, row]    

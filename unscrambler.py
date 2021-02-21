@@ -7,7 +7,7 @@ class Unscrambler:
     def quicksort(self, row):
         arr = self.scrambler.matrix[row]
         def swap(i, j):
-            self.scrambler.swap_pix(row, i, j)
+            self.scrambler.swap_cols(row, i, j)
 
         def qs(start, end):
             if start >= end:

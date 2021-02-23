@@ -1,5 +1,6 @@
 import adafruit_imageload
 from displayio import Bitmap, Palette
+from imageloader import load_from_bytes
 from palette_ext import PaletteExt
 from random import randrange
 from time import sleep
@@ -33,6 +34,14 @@ class Scrambler:
     def load_bitmap(cls, file):
         return adafruit_imageload.load(
             file,
+            bitmap=cls,
+            palette=PaletteExt,
+        )
+
+    @classmethod
+    def load_bitmap_bytes(cls, bmp_bytes):
+        return load_from_bytes(
+            bmp_bytes,
             bitmap=cls,
             palette=PaletteExt,
         )

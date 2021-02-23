@@ -5,6 +5,7 @@ Driver for a an LED algorithm visualizer (work in progress, more detail to be ad
 ### MatrixPortal Library
 - [Overview](https://learn.adafruit.com/adafruit-matrixportal-m4/matrixportal-library-overview)
 - [MatrixPortal Library Documentation](https://circuitpython.readthedocs.io/projects/matrixportal/en/latest/)
+- [Creating MatrixPortal Projects with CircuitPython](https://learn.adafruit.com/creating-projects-with-the-circuitpython-matrixportal-library)
 
 ### CircuitPython
 - [displayio documentation](https://circuitpython.readthedocs.io/en/latest/shared-bindings/displayio/)
